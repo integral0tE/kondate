@@ -82,10 +82,10 @@
 </div>
 <script>
 const SITE = {
-  kurashiru: { label: 'クラシル',         base: 'https://www.kurashiru.com/search?query=' },
-  kikkoman:  { label: 'キッコーマン',      base: 'https://www.kikkoman.co.jp/homecook/search/?search=' },
-  sirogohan: { label: '白ご飯.com',       base: 'https://www.sirogohan.com/search/?q=' },
-  dish:      { label: 'ディッシュキッチン', base: 'https://dish.allabout.co.jp/articles/search/?keyword=' },
+  kurashiru: { label: 'クラシル',         base: 'https://www.google.com/search?q=', qs:' クラシル レシピ' },
+  kikkoman:  { label: 'キッコーマン',      base: 'https://www.google.com/search?q=', qs:' キッコーマン レシピ' },
+  sirogohan: { label: '白ご飯.com',       base: 'https://www.google.com/search?q=', qs:' 白ご飯.com レシピ' },
+  dish:      { label: 'ディッシュキッチン', base: 'https://www.google.com/search?q=', qs:' ディッシュキッチン レシピ' },
 };
 
 const MAIN_DISHES = [
@@ -437,7 +437,7 @@ function render(menu){
   if(!menu){el.innerHTML=`<div class="empty"><div class="e-icon">🤔</div><p>入力した食材で作れる料理が見つかりませんでした。<br>食材を追加してみてください。</p></div>`;return;}
   const{main,simples}=menu;
   const site=SITE[main.site];
-  const url=site.base+encodeURIComponent(main.name);
+  const url=site.base+encodeURIComponent(main.name+(site.qs||''));
   el.innerHTML=`
     <div class="results-header">
       <span class="results-title">今夜の献立</span>
