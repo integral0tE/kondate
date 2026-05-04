@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="icon.png">
   <title>今夜の献立</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -154,6 +153,22 @@ const MAIN_DISHES = [
   { name:'豚肉のトマト煮込み',     icon:'🍲', site:'kurashiru', desc:'トマトと豚肉を煮込んだイタリア風おかず',                         keys:[['豚肉'],['トマト']] },
   { name:'豚しゃぶ鍋',             icon:'🍲', site:'sirogohan', desc:'薄切り豚肉をしゃぶしゃぶして野菜と一緒に。ポン酢で',             keys:[['豚肉']] },
   { name:'豚肉と豆苗の炒め物',     icon:'🥢', site:'dish',      desc:'豆苗と豚肉をさっと炒めるだけ。彩りよく栄養満点',               keys:[['豚肉'],['豆苗']] },
+  { name:'豚肉の照り焼き',         icon:'🥩', site:'kikkoman',  desc:'甘辛タレが絡んだ豚肉の照り焼き。ご飯がすすむ定番おかず',       keys:[['豚肉']] },
+  { name:'豚肉の黒酢炒め',         icon:'🥢', site:'kurashiru', desc:'黒酢のコクと酸味が豚肉の旨みを引き立てる中華風炒め',           keys:[['豚肉']] },
+  { name:'豚肉のガーリックソテー', icon:'🥩', site:'dish',      desc:'にんにくバターで香ばしく焼いた食欲をそそる一品',               keys:[['豚肉']] },
+  { name:'豚肉の甘酢炒め',         icon:'🥢', site:'kikkoman',  desc:'甘酸っぱいタレが絡んだ食欲そそる炒め物',                       keys:[['豚肉']] },
+  { name:'豚肉の柚子こしょう焼き', icon:'🥩', site:'dish',      desc:'柚子こしょうのさわやかな辛みと豚肉の旨みが絶妙',               keys:[['豚肉']] },
+  { name:'豚肉の塩こうじ焼き',     icon:'🥩', site:'sirogohan', desc:'塩こうじに漬けて焼くだけ。しっとりやわらかく旨みアップ',       keys:[['豚肉']] },
+  { name:'豚バラのポン酢蒸し',     icon:'🥩', site:'kurashiru', desc:'レンジで蒸してポン酢をかけるだけ。さっぱりヘルシー',           keys:[['豚肉']] },
+  { name:'チャーシュー丼',         icon:'🍚', site:'sirogohan', desc:'甘辛のチャーシューをご飯にのせた満足感たっぷりの丼',           keys:[['豚肉']] },
+  { name:'豚肉のごまだれ炒め',     icon:'🥢', site:'kikkoman',  desc:'濃厚なごまだれが豚肉に絡んだ食欲増進おかず',                   keys:[['豚肉']] },
+  { name:'豚肉のピリ辛炒め',       icon:'🥢', site:'kurashiru', desc:'ピリ辛ダレで炒めた食欲旺盛な一品。ご飯が止まらない',           keys:[['豚肉']] },
+  { name:'豚肉のみそ煮',           icon:'🍲', site:'sirogohan', desc:'甘辛味噌で豚肉をじっくり煮込んだ和風おかず',                   keys:[['豚肉']] },
+  { name:'豚バラ巻き照り焼き',     icon:'🥩', site:'dish',      desc:'豚バラを巻いて照り焼きに。見た目もおしゃれな一品',             keys:[['豚肉']] },
+  { name:'豚肉のハーブ焼き',       icon:'🥩', site:'kurashiru', desc:'ハーブとオリーブオイルで焼いたイタリアン風ポーク',             keys:[['豚肉']] },
+  { name:'豚肉のカレー炒め',       icon:'🍛', site:'dish',      desc:'カレー粉で炒めるだけ。スパイシーで食欲をそそる',               keys:[['豚肉']] },
+  { name:'豚肉のレモン炒め',       icon:'🍋', site:'kikkoman',  desc:'レモンのさわやかな酸味で豚肉をさっぱりと炒めた一品',           keys:[['豚肉']] },
+  { name:'豚バラの角煮丼',         icon:'🍚', site:'sirogohan', desc:'とろとろ角煮をご飯にのせた食べ応え抜群の丼',                   keys:[['豚肉']] },
   // ── 牛肉 ──
   { name:'牛丼',                   icon:'🍚', site:'kurashiru', desc:'ほんのり甘辛の牛肉がご飯にのってボリューム満点',                 keys:[['牛肉']] },
   { name:'ビーフステーキ',         icon:'🥩', site:'dish',      desc:'シンプルに焼くだけで絶品。ソースにこだわって',                   keys:[['牛肉']] },
@@ -169,6 +184,15 @@ const MAIN_DISHES = [
   { name:'牛肉と玉ねぎの炒め物',   icon:'🥩', site:'dish',      desc:'甘い玉ねぎと牛肉のコク。シンプルなのに深い味わい',               keys:[['牛肉'],['玉ねぎ','たまねぎ']] },
   { name:'牛肉とブロッコリーの炒め',icon:'🥩',site:'kurashiru', desc:'オイスターソースでコクうま。彩り鮮やかな中華風炒め',             keys:[['牛肉'],['ブロッコリー']] },
   { name:'牛カルビ焼き',           icon:'🥩', site:'kikkoman',  desc:'甘辛のタレに漬けたカルビを香ばしく焼く韓国風',                   keys:[['牛肉']] },
+  { name:'牛肉の照り焼き',         icon:'🥩', site:'sirogohan', desc:'甘辛タレが絡んだ牛肉の照り焼き。ご飯がすすむ',                   keys:[['牛肉']] },
+  { name:'牛肉のオイスターソース炒め',icon:'🥢',site:'kikkoman',desc:'コクうまオイスターソースで炒めた中華風牛肉おかず',               keys:[['牛肉']] },
+  { name:'牛肉のみそ炒め',         icon:'🥢', site:'kurashiru', desc:'味噌の風味で牛肉を炒めた食欲旺盛な和風おかず',                   keys:[['牛肉']] },
+  { name:'牛肉の生姜炒め',         icon:'🥩', site:'dish',      desc:'生姜の香りが効いた、さっぱりとした牛肉炒め',                     keys:[['牛肉']] },
+  { name:'ローストビーフ',         icon:'🥩', site:'kurashiru', desc:'オーブンでじっくり焼いた本格ローストビーフ',                     keys:[['牛肉']] },
+  { name:'牛肉の甘辛丼',           icon:'🍚', site:'sirogohan', desc:'甘辛く煮た牛肉をご飯にのせた簡単丼',                             keys:[['牛肉']] },
+  { name:'牛肉のカレー炒め',       icon:'🍛', site:'dish',      desc:'カレー粉で炒めた牛肉はスパイシーで食欲増進',                     keys:[['牛肉']] },
+  { name:'牛肉の黒こしょう炒め',   icon:'🥩', site:'kurashiru', desc:'ブラックペッパーが効いたシンプルな牛肉炒め',                     keys:[['牛肉']] },
+  { name:'牛肉のバター醤油炒め',   icon:'🥩', site:'kikkoman',  desc:'バターと醤油の黄金コンビで旨みたっぷりの牛肉炒め',               keys:[['牛肉']] },
   { name:'牛すじ煮込み',           icon:'🍲', site:'sirogohan', desc:'とろとろになるまで煮込んだ牛すじ。こんにゃくと一緒に',           keys:[['牛すじ']] },
   // ── ひき肉 ──
   { name:'ハンバーグ',             icon:'🍔', site:'kurashiru', desc:'ふっくらジューシーに仕上げるコツあり',                           keys:[['合いびき肉','豚ひき肉','牛ひき肉']] },
@@ -402,18 +426,24 @@ let ingredients = [];
 function norm(s) { return s.replace(/\s/g,'').toLowerCase(); }
 function matchAny(group,userList){return group.some(k=>{const nk=norm(k);return userList.some(i=>{const ni=norm(i);return ni.includes(nk)||nk.includes(ni);});});}
 function realGroups(dish){return dish.keys.filter(g=>!g.every(k=>SEASONINGS.has(k)));}
+function canMakeMain(dish){
+  if(ingredients.length===0)return true;
+  const groups=realGroups(dish);
+  if(groups.length===0)return true;
+  return groups.some(g=>matchAny(g,ingredients)); // どれか1つが合えばOK
+}
 function canMake(dish){
   if(ingredients.length===0)return true;
   const groups=realGroups(dish);
   if(groups.length===0)return true;
-  return groups.every(g=>matchAny(g,ingredients));
+  return groups.every(g=>matchAny(g,ingredients)); // 全部一致
 }
 function score(dish){let h=0;for(const g of realGroups(dish)){if(matchAny(g,ingredients))h++;}return h*10+Math.random();}
 function pick(list,exclude,checkFn){const pool=[...list].filter(d=>!exclude.includes(d.name)&&checkFn(d));if(!pool.length)return null;return pool.sort((a,b)=>score(b)-score(a))[0];}
 function buildMenu(){
   const used=[];
   const catCount={};
-  const main=pick(MAIN_DISHES,used,canMake);
+  const main=pick(MAIN_DISHES,used,canMakeMain);
   if(!main)return null;
   used.push(main.name);
   const simples=[];
